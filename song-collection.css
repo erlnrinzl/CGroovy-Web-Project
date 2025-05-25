@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: #f4f2ff;
+    color: #333;
+  }
+  
+.hero {
+  width: 100%;
+  height: 10px;
+  object-fit: cover;
+}
+  
+section h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+    
+section.song-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+  
+.genre-collection {
+  margin-bottom: 3rem;
+}
+
+.genre-collection h1 {
+  text-align: left;
+  padding: 0 3rem;
+  color: #4d3bbd;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+  
+.song-card:hover {
+  transform: translateY(-5px);
+}
+  
+.song-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+  
+.song-card h2 {
+  color: #8f6dfc;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+}
+ 
+.song-card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+  
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #8f6dfc;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  transition: background-color 0.3s ease;
+}
+  
+.btn:hover {
+  background-color: #7858d6;
+}
+  
+@media (max-width: 800px) {
+  .song-card {
+    padding: 1rem;
+  }
+
+  .song-card img {
+    max-width: 100%;
+  }
+
+  section.song-collection {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
