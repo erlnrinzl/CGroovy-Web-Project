@@ -1,15 +1,7 @@
-body {
-    margin: 0;
-    background-color: #f4f2ff;
-    color: #333;
-  }
-  
-.hero {
-  width: 100%;
-  height: 10px;
-  object-fit: cover;
+header {
+  position: relative;
 }
-  
+
 section h1 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
@@ -81,23 +73,79 @@ section.song-collection {
 .btn:hover {
   background-color: #7858d6;
 }
-  
-@media (max-width: 800px) {
+
+@media (max-width: 600px) {
+  section.song-collection {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .genre-collection h1 {
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+
   .song-card {
     padding: 1rem;
+    font-size: 0.95rem;
   }
 
   .song-card img {
     max-width: 100%;
   }
 
+  section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
   section.song-collection {
-    padding: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
     gap: 1.5rem;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
+  .genre-collection h1 {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .song-card {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  section.song-collection {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2.5rem;
+    gap: 1.8rem;
+  }
+
+  .genre-collection h1 {
+    padding: 0 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 1.7rem;
+  }
+
+  .song-card {
+    padding: 1.3rem;
+    font-size: 1.08rem;
+  }
+
+  section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
   }
 }

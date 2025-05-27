@@ -1,3 +1,7 @@
+header {
+  position: relative;
+}
+
 .about-main {
   padding: 6rem 4rem 2rem;
   display: flex;
@@ -77,4 +81,67 @@
   padding: 2rem;
   border-radius: 1rem;
   line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .about-main {
+    padding: 2rem 1rem 1rem;
+    gap: 1.5rem;
+  }
+  .subtext-headline {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+  .grid-content,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .info-card,
+  .team-member {
+    padding: 1rem;
+  }
+  .team-member img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .about-main {
+    padding: 3rem 2rem 1.5rem;
+    gap: 2rem;
+  }
+  .subtext-headline {
+    font-size: 1.05rem;
+  }
+  .grid-content,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .info-card,
+  .team-member {
+    padding: 1.2rem;
+  }
+  .team-member img {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .about-main {
+    padding: 4rem 2.5rem 2rem;
+    gap: 2.5rem;
+  }
+  .grid-content,
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.7rem;
+  }
+  .team-member img {
+    width: 90px;
+    height: 90px;
+  }
 }
