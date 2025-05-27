@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | C'Groovy</title>
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
-    <link rel="stylesheet" href="./newstyle.css" />
+    <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="aboutus.css" />
-    <script type="module" src="./components/logo.js"></script>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
   </head>
   <body class="secondary">
     <header>
       <nav class="navbar">
-        <!-- <app-logo></app-logo> -->
         <div class="logo">
           <h1>
             <span style="color: #ff1212">C</span
@@ -23,13 +21,33 @@
           </h1>
         </div>
         <div class="nav-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="song-collection.html">Song Collection</a></li>
-            <li><a href="#">Song Detail</a></li>
-            <li><a href="#">Register</a></li>
-          </ul>
+          <div class="nav-link"><a href="./index.html">Home</a></div>
+          <div class="nav-link active">
+            <a href="./aboutus.html">About Us</a>
+          </div>
+          <div class="nav-link">
+            <a href="./song-collection.html">Song Collection</a>
+          </div>
+          <div class="nav-link"><a href="#">Song Detail</a></div>
+          <div class="nav-link"><a href="./register.html">Register</a></div>
+        </div>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn">
+          <img src="./assets/icons/menu.svg" alt="menu" />
+        </button>
+
+        <div class="mobile-nav-links">
+          <div class="mobile-nav">
+            <div class="nav-link"><a href="./index.html">Home</a></div>
+            <div class="nav-link active">
+              <a href="./aboutus.html">About Us</a>
+            </div>
+            <div class="nav-link">
+              <a href="./song-collection.html">Song Collection</a>
+            </div>
+            <div class="nav-link"><a href="#">Song Detail</a></div>
+            <div class="nav-link"><a href="./register.html">Register</a></div>
+          </div>
         </div>
       </nav>
     </header>
@@ -145,10 +163,56 @@
     </main>
 
     <footer>
-      <div class="footer-container">
-        <app-logo></app-logo>
-        <p>© 2025 C'Groovy. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="company-info">
+          <div class="company-info-content">
+            <div class="brand-logo">
+              <div class="logo">
+                <h2>
+                  <span style="color: #ff1212">C</span
+                  ><span style="color: #bba3f4">'</span
+                  ><span style="color: white">Gr</span
+                  ><span style="color: #bba3f4">oo</span
+                  ><span style="color: white">vy</span>
+                </h2>
+              </div>
+            </div>
+            <p>
+              Your premier hub for endless music. Listen, explore, and
+              personalize your soundscape.
+            </p>
+            <div class="social-media">icons</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-link">
+            <h3>Company</h3>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div class="footer-link">
+            <h3>Support</h3>
+            <a href="./faq.html">Contact Us</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./terms.html">Terms & Conditions</a>
+          </div>
+          <div class="footer-link">
+            <h3>Account</h3>
+            <a href="./index.html">My Library</a>
+            <a href="#">Followed Artists</a>
+            <a href="#">Listening History</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 C'Groovy Music. All rights reserved</p>
+        <p>
+          The soundtrack to your life, for every musician and fan, everywhere
+        </p>
       </div>
     </footer>
+
+    <script src="./global.js"></script>
   </body>
 </html>
