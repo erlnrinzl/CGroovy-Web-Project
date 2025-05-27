@@ -40,7 +40,7 @@ header {
 
 header nav {
   background: linear-gradient(90deg, rgba(255, 195, 254, 0.7) 0%, rgba(213, 195, 255, 0.7) 100%);
-  color: fff;
+  color: #f7f7f7;
   padding: 0.5rem 2rem;
   display: flex;
   flex-direction: row;
@@ -57,8 +57,37 @@ nav .nav-links {
   gap: 2rem;
 }
 
-header nav .nav-links a {
-  color: #fff;
+nav button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0.2rem;
+}
+
+nav .mobile-nav-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background: linear-gradient(90deg, rgba(255, 195, 254, 0.97) 0%, rgba(213, 195, 255, 0.97) 100%);
+  /* background: linear-gradient(90deg, rgba(255, 195, 254, 0.7) 0%, rgba(213, 195, 255, 0.7) 100%); */
+  z-index: 999;
+  padding: 1rem 0;
+}
+
+nav .mobile-nav-links.active {
+  display: block;
+}
+
+.nav-links a, .mobile-nav-links a {
+  color: #f7f7f7;
   text-decoration: none;
 }
 
@@ -80,7 +109,7 @@ header nav .nav-links .nav-link:hover {
 .btn {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  background: white;
+  background: #f7f7f7;
   border: none;
   display: flex;
   justify-content: center;
@@ -90,7 +119,7 @@ header nav .nav-links .nav-link:hover {
 
 .btn:hover {
   background: linear-gradient(90deg, rgba(255, 195, 254, 0.7) 0%, rgba(254, 212, 253, 0.82) 100%);
-  color: #fff;
+  color: #f7f7f7;
   transform: translate(0, -0.2rem);
   transition: all 0.3s ease-in-out;
 }
@@ -101,7 +130,7 @@ header nav .nav-links .nav-link:hover {
 
 .btn-primary {
   background: #FFC3FE;
-  color: #fff;
+  color: #f7f7f7;
   background: linear-gradient(90deg, rgba(187, 163, 244, 0.82) 0%, rgba(254, 212, 253, 0.82) 100%);
 }
 
@@ -109,35 +138,169 @@ header nav .nav-links .nav-link:hover {
   background: none;
   border: 1px solid #BBA3F4;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #fff;
+  color: #f7f7f7;
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 4rem;
   background: linear-gradient(90deg, #FFC3FE 0%, rgba(213, 195, 255, 0.82) 100%);
-  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #f7f7f7;
+  text-align: left;
 }
 
-footer .footer-container {
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-content .logo {
+  padding-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #5f636a;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-link {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  text-align: center;
+  gap: 0.5rem;
 }
 
-footer .footer-container .footer-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.footer-link h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-footer .footer-container .footer-links {
+.footer-bottom {
+  padding-top: 2rem;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
-footer .footer-container .footer-links a {
-  text-decoration: none;
+/* Responsive Styles */
+
+/* Mobile: up to 600px */
+@media (max-width: 600px) {
+  header {
+    position: relative;
+  }
+  
+  header nav {
+    padding: 0.5rem 1.2rem;
+    justify-content: space-between;
+  }
+
+  nav .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  header nav .logo h1 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  
+  .btn, .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.1rem;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
 }
+
+/* Tablet: 601px to 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    position: relative;
+  }
+  
+  header nav {
+    padding: 0.5rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  nav .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .btn, .btn-primary, .btn-secondary {
+    padding: 0.5rem 0.8rem;
+  }
+  footer .footer-content {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-bottom {
+    font-size: 0.9rem;
+    padding-top: 1.2rem;
+  }
+}
+
+/* Small Laptop: 901px to 1200px */
+@media (min-width: 901px) and (max-width: 1200px) {
+  header nav {
+    gap: 6rem;
+    padding: 0.5rem 2rem;
+  }
+  nav .nav-links {
+    gap: 1.5rem;
+  }
+  .btn, .btn-primary, .btn-secondary {
+    padding: 0.5rem 1rem;
+  }
+  footer .footer-content {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-bottom {
+    font-size: 0.95rem;
+    padding-top: 1.5rem;
+  }
+}
+
+/* Large Laptop: 1201px and up */
+/* No changes needed, base styles apply */
