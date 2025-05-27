@@ -1,0 +1,275 @@
+.slider-container img{
+  max-height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-item .hero-content {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  padding: 2rem 4rem;
+}
+
+.slider-item .hero-content.left {
+  justify-content: flex-start;
+}
+
+.slider-item .hero-content.right {
+  justify-content: flex-end;
+}
+
+.hero-content .content-wrapper {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 3.5rem;
+  padding: 2rem 0;
+}
+
+.hero-content .hero-text {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-content .top-headline {
+  color: #FFC3FE;
+  font-size: 1.2rem;
+}
+
+.hero-content .primary-headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-content .subtext-headline {
+  font-weight: 100;
+}
+
+.hero-content .hero-actions {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: start;
+}
+
+.hero-content .app-market {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  color: #fff;
+}
+
+.hero-content .market-icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-content .market-icons img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.slider-dots {
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero .slider-dots {
+  position: absolute;
+}
+
+.best-seller .slider-dots {
+  padding-top: 1.5rem;
+}
+
+.slider-dots .dot {
+  width: 1rem;
+  height: 1rem;
+  background: rgba(198, 176, 253, 0.85);
+  border-radius: 100px;
+}
+
+.slider-dots .dot.active {
+  background: #fff;
+}
+
+.recommendation-songs {
+  padding: 2rem 4rem;
+}
+
+.recommendation-songs h2 {
+  padding: 0.2rem 0;
+}
+
+.recommendation-songs h2::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background-image: url('./assets/image/dotnote.png');
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.recommendation-songs .songs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.songs-container .songs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+.song-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #FAD6F9;
+  border-bottom: 1px solid #FAD6F9;
+
+}
+
+.song-item p {
+  font-weight: 200;
+}
+
+.song-item .album-cover {
+  width: 20%;
+  height: auto;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.song-item .song-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.song-item .song-description .title {
+  font-weight: bold;
+}
+
+.song-item .song-action img {
+  width: 2rem;
+  height: 2rem;
+  background-color: none;
+  border: none;
+}
+
+.song-item:hover {
+  padding: 0;
+  margin: 0.5rem 0;
+  transform: translate(0, -0.2rem);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+}
+
+.best-seller {
+  padding: 2rem 4rem;
+}
+
+.best-seller h2 {
+  padding: 0.2rem 0;
+}
+
+.best-seller h2::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background-image: url("./assets/image/dotnote.png");
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.best-seller .best-seller-container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(80px, 1fr));
+  gap: 2rem;
+}
+
+.best-seller-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+.best-seller-item h3 {
+  font-size: 1rem;
+}
+
+.best-seller-item p {
+  font-weight: 200;
+}
+
+.best-seller-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.best-seller-item .best-seller-name {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.best-seller-item:hover {
+  transform: translate(0, -0.2rem);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+}
+
+.songs-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slider-controls button {
+  background-color: #FAD6F9;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C'Groovy Music</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./newstyle.css" />
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <!-- <app-logo></app-logo> -->
         <div class="logo">
           <h1>
             <span style="color: #ff1212">C</span
@@ -20,81 +22,148 @@
           </h1>
         </div>
         <div class="nav-links">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="song-collection.html">Song Collection</a></li>
-            <li><a href="#">Song Detail</a></li>
-            <li><a href="#">Register</a></li>
-          </ul>
+          <div class="nav-link active"><a href="#">Home</a></div>
+          <div class="nav-link"><a href="aboutus.html">About Us</a></div>
+          <div class="nav-link">
+            <a href="song-collection.html">Song Collection</a>
+          </div>
+          <div class="nav-link"><a href="#">Song Detail</a></div>
+          <div class="nav-link"><a href="#">Register</a></div>
         </div>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-container">
-          <div class="hero-content">
-            <div class="hero-text-content">
-              <p class="top-headline">Immerse Yourself in Sound</p>
-              <h1 class="primary-headline">Discover music that moves you!</h1>
-              <p class="subtext-headline">
-                With an extensive library of songs from around the world,
-                CGroovy brings your favorite tunes right to your fingertips.
-                Enjoy seamless streaming, personalized recommendations, and an
-                engaging music community.
-              </p>
-            </div>
-            <div class="hero-actions">
-              <button class="btn btn-primary">Start Listening</button>
-              <button class="btn btn-secondary">Expolore Now</button>
-            </div>
-            <div class="app-market">
-              <p>Also available on:</p>
-              <div class="market-icons">
-                <img src="./assets/icons/appstore.svg" alt="app-store" />
-                <img src="./assets/icons/playstore.svg" alt="play-store" />
-                <img src="./assets/icons/microsoft.svg" alt="microsoft.svg" />
+        <div class="slider-wrapper">
+          <div class="slider-container">
+            <div class="slider-item active">
+              <img src="./assets/image/hero1.jpg" alt="Hero Image 1" />
+
+              <div class="hero-content right">
+                <div class="content-wrapper">
+                  <div class="hero-text">
+                    <p class="top-headline">Immerse Yourself in Sound</p>
+                    <h1 class="primary-headline">
+                      Discover music that moves you!
+                    </h1>
+                    <p class="subtext-headline">
+                      With an extensive library of songs from around the world,
+                      CGroovy brings your favorite tunes right to your
+                      fingertips. Enjoy seamless streaming, personalized
+                      recommendations, and an engaging music community.
+                    </p>
+                  </div>
+
+                  <div class="hero-actions">
+                    <button class="btn btn-primary">Start Listening</button>
+                    <button class="btn btn-secondary">Expolore Now</button>
+                  </div>
+
+                  <div class="app-market">
+                    <p>Also available on:</p>
+                    <div class="market-icons">
+                      <img src="./assets/icons/appstore.svg" alt="app-store" />
+                      <img
+                        src="./assets/icons/playstore.svg"
+                        alt="play-store"
+                      />
+                      <img
+                        src="./assets/icons/microsoft.svg"
+                        alt="microsoft.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div class="slider-item">
+              <img src="./assets/image/hero2.jpg" alt="Hero Image 2" />
+
+              <div class="hero-content left">
+                <div class="content-wrapper">
+                  <div class="hero-text">
+                    <p class="top-headline">Unlimited Streaming</p>
+                    <h1 class="primary-headline">
+                      Stream Freely, Listen Endlessly.
+                    </h1>
+                    <p class="subtext-headline">
+                      Discover endless hits, curated playlists, and top
+                      recommendations — whenever and wherever you want.
+                    </p>
+                  </div>
+
+                  <div class="hero-actions">
+                    <button class="btn btn-primary">Start Listening</button>
+                    <button class="btn btn-secondary">Expolore Now</button>
+                  </div>
+
+                  <div class="app-market">
+                    <p>Also available on:</p>
+                    <div class="market-icons">
+                      <img src="./assets/icons/appstore.svg" alt="app-store" />
+                      <img
+                        src="./assets/icons/playstore.svg"
+                        alt="play-store"
+                      />
+                      <img
+                        src="./assets/icons/microsoft.svg"
+                        alt="microsoft.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-item">
+              <img src="./assets/image/hero3.jpg" alt="Hero Image 3" />
+
+              <div class="hero-content right">
+                <div class="content-wrapper">
+                  <div class="hero-text">
+                    <p class="top-headline">Diverse Collection</p>
+                    <h1 class="primary-headline">
+                      Explore genres from Pop, R&B, K-Pop, and beyond
+                    </h1>
+                    <p class="subtext-headline">
+                      From global hits to underground beats, C’Groovy brings
+                      every sound to your speakers.
+                    </p>
+                  </div>
+
+                  <div class="hero-actions">
+                    <button class="btn btn-primary">Start Listening</button>
+                    <button class="btn btn-secondary">Expolore Now</button>
+                  </div>
+
+                  <div class="app-market">
+                    <p>Also available on:</p>
+                    <div class="market-icons">
+                      <img src="./assets/icons/appstore.svg" alt="app-store" />
+                      <img
+                        src="./assets/icons/playstore.svg"
+                        alt="play-store"
+                      />
+                      <img
+                        src="./assets/icons/microsoft.svg"
+                        alt="microsoft.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-dots">
+              <div class="dot active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
-        </div>
-        <div class="slide-indicator">
-          <div class="slide-item active"></div>
-          <div class="slide-item"></div>
-          <div class="slide-item"></div>
         </div>
       </section>
-      <section class="best-seller">
-        <h2>Best Seller Artist</h2>
-        <div class="best-seller-container">
-          <div class="best-seller-item">
-            <img src="./assets/image/aespa.jpg" alt="aespa" />
-            <h3>Aespa</h3>
-            <p>Artist</p>
-          </div>
-          <div class="best-seller-item">
-            <img src="./assets/image/aespa.jpg" alt="aespa" />
-            <h3>Aespa</h3>
-            <p>Artist</p>
-          </div>
-          <div class="best-seller-item">
-            <img src="./assets/image/aespa.jpg" alt="aespa" />
-            <h3>Aespa</h3>
-            <p>Artist</p>
-          </div>
-          <div class="best-seller-item">
-            <img src="./assets/image/aespa.jpg" alt="aespa" />
-            <h3>Aespa</h3>
-            <p>Artist</p>
-          </div>
-          <div class="best-seller-item">
-            <img src="./assets/image/aespa.jpg" alt="aespa" />
-            <h3>Aespa</h3>
-            <p>Artist</p>
-          </div>
-        </div>
-      </section>
+
       <section class="recommendation-songs">
         <h2>Recommended Songs</h2>
         <div class="songs-container">
@@ -250,9 +319,55 @@
           </div>
         </div>
       </section>
+
+      <section class="best-seller">
+        <h2>Best Seller Songs</h2>
+
+        <div class="songs-slider-wrapper">
+          <div class="slider-controls">
+            <button id="prev-btn" class="slider-btn">❮</button>
+          </div>
+          <div class="best-seller-container">
+            <div class="best-seller-item">
+              <img src="./assets/image/aespa.jpg" alt="aespa" />
+              <h3>Aespa</h3>
+              <p>Artist</p>
+            </div>
+            <div class="best-seller-item">
+              <img src="./assets/image/aespa.jpg" alt="aespa" />
+              <h3>Aespa</h3>
+              <p>Artist</p>
+            </div>
+            <div class="best-seller-item">
+              <img src="./assets/image/aespa.jpg" alt="aespa" />
+              <h3>Aespa</h3>
+              <p>Artist</p>
+            </div>
+            <div class="best-seller-item">
+              <img src="./assets/image/aespa.jpg" alt="aespa" />
+              <h3>Aespa</h3>
+              <p>Artist</p>
+            </div>
+            <div class="best-seller-item">
+              <img src="./assets/image/aespa.jpg" alt="aespa" />
+              <h3>Aespa</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button id="next-btn" class="slider-btn">❯</button>
+          </div>
+        </div>
+
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
     </main>
     <footer>&copy; 2023 C'Groovy Music. All rights reserved.</footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <script src="/components/logo.js"></script>
   </body>
 </html>

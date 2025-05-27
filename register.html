@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register - C'Groovy Music</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">
+            <h1>
+                <span style="color: #ff1212">C</span
+                ><span style="color: #bba3f4">'</span
+                ><span style="color: white">Gr</span
+                ><span style="color: #bba3f4">oo</span
+                ><span style="color: white">vy</span>
+            </h1>
+            </div>
+        <div class="nav-links">
+            <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="./song-collection.html">Song Collection</a></li>
+            <li><a href="#">Song Detail</a></li>
+            <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+        <main class="register-container">
+            <h2>Register</h2>
+            <form id="registerForm" class="register-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@email.com" />
+        
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Minimum 6 characters" />
+        
+            <label for="age">Age</label>
+            <input type="number" id="age" min="1" max="100" />
+        
+            <label>Gender</label>
+            <div>
+                <input type="radio" name="gender" value="male" id="male" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female" />
+                <label for="female">Female</label>
+            </div>
+        
+            <button class="btn btn-primary" type="submit">Register</button>
+            </form>
+        </main>
+        
+
+    <footer>&copy; 2023 C'Groovy Music. All rights reserved.</footer>
+
+    <script src="register.js"></script>
+    </body>
+    </html>
