@@ -36,7 +36,6 @@ $(document).ready(function() {
 
       const songList = listItem.find('.song-collection');
       renderSongs(songsFiltered, songList);
-      console.log(genre, songsFiltered)
     });
   }
 

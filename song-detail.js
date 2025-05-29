@@ -26,14 +26,12 @@ $(document).ready(function() {
       audioElement.src = songData.audioUrl;
 
       $('#play-btn').click(function() {
-        console.log('from play button');
         audioElement.play();
         $(this).prop('disabled', true);
         $('#pause-btn').prop('disabled', false);
       });
 
       $('#pause-btn').click(function() {
-        console.log('from pause button');
         audioElement.pause();
         $(this).prop('disabled', true);
         $('#play-btn').prop('disabled', false);

@@ -1,7 +1,7 @@
 $(function () { 
     let songItems = [];
     let bestSellerItems = $('.best-seller-container .best-seller-item');
-
+    
     let currentPage = 0;
     let visibleCount = 0;
     
@@ -59,17 +59,34 @@ $(function () {
         });
 
         bestSellerItems = container.find('.best-seller-item');
+        currentPage = 0;
         updateSliderStyles(bestSellerItems);
 
+        $('#next-btn').off('click').on('click', function () {
+            const totalPages = Math.ceil(bestSellerItems.length / visibleCount);
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+            }
+            if (currentPage > totalPages - 1) currentPage = totalPages - 1;
+            updateSlider();
+            console.log(currentPage, totalPages)
+        });
+        
+        $('#prev-btn').off('click').on('click', function () {
+            if (currentPage > 0) {
+                currentPage--;
+            }
+            if (currentPage < 0) currentPage = 0;
+            updateSlider();
+        });
     }
 
 
     function getVisibleCount() {
         if (window.innerWidth < 400) return 1;
         if (window.innerWidth < 600) return 2;
-        if (window.innerWidth < 900) return 3;
+        if (window.innerWidth < 900) return 2;
         if (window.innerWidth < 1200) return 4;
-        currentPage = 0;
         return 5;
     }
 
@@ -88,37 +105,23 @@ $(function () {
         });
 
         updateSlider();
-
-        $('#next-btn').on('click', function () {
-            const totalPages = Math.ceil(bestSellerItems.length / visibleCount);
-            if (currentPage < totalPages - 1) {
-                currentPage++;
-            }
-            if (currentPage > totalPages - 1) currentPage = totalPages - 1;
-            updateSlider();
-        });
-        
-        $('#prev-btn').on('click', function () {
-            if (currentPage > 0) {
-                currentPage--;
-            }
-            if (currentPage < 0) currentPage = 0;
-            updateSlider();
-        });
     }
 
     function updateSlider() {
         const container = $('.best-seller-container');
-        const itemWidth = bestSellerItems.outerWidth(true);
-        
+        const containerWidth = container.width();
         const totalPages = Math.ceil(bestSellerItems.length / visibleCount);
+    
+        // Clamp currentPage
         if (currentPage > totalPages - 1) currentPage = totalPages - 1;
         if (currentPage < 0) currentPage = 0;
+    
         container.animate({
-            scrollLeft: currentPage * visibleCount * itemWidth
+            scrollLeft: currentPage * containerWidth
         }, 300);
-        $('.best-seller .slider-dots .dot').removeClass('active')
-        $('.best-seller .slider-dots .dot').eq(currentPage).addClass('active')
+    
+        $('.best-seller .slider-dots .dot').removeClass('active');
+        $('.best-seller .slider-dots .dot').eq(currentPage).addClass('active');
     }
     
     
@@ -139,7 +142,6 @@ $(function () {
     /* start of the process */
     showImage(currentIndex)
     fetchSongsData().catch(error => console.error('Error fetching songs:', error));
-    // updateSliderStyles();
 
     setInterval(() => {
         currentIndex = (currentIndex + 1) % totalImages
@@ -148,8 +150,7 @@ $(function () {
 
     $(window).on('resize', function () {
         visibleCount = getVisibleCount();
-        
-        updateSliderStyles(bestSellerItems, visibleCount);
+        updateSliderStyles(bestSellerItems);
     });
     
 });
