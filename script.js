@@ -69,7 +69,6 @@ $(function () {
             }
             if (currentPage > totalPages - 1) currentPage = totalPages - 1;
             updateSlider();
-            console.log(currentPage, totalPages)
         });
         
         $('#prev-btn').off('click').on('click', function () {
