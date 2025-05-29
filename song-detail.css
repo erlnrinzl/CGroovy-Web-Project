@@ -1,0 +1,135 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+  position: relative
+}
+
+.song-details-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.song-info {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.song-cover {
+    flex: 0 0 300px;
+}
+
+.song-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.song-meta {
+    padding: 2rem;
+    flex: 1;
+}
+
+.song-meta h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #D5C3FF;
+}
+
+.song-meta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.song-meta p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.song-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.control-btn {
+    padding: 0.5rem 1rem;
+    background-color: #FAD6F9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.control-btn:hover {
+    background-color: #D5C3FF;
+}
+
+.control-btn i {
+    font-size: 1rem;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.song-lyrics {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.song-lyrics h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #D5C3FF;
+}
+
+#lyrics-content {
+    white-space: pre-line;
+    line-height: 2;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .song-info {
+        flex-direction: column;
+    }
+    
+    .song-cover {
+        flex: 0 0 auto;
+    }
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    .nav ul li {
+        margin: 0 0.75rem;
+    }
+}
