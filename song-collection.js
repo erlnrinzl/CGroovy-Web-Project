@@ -51,6 +51,7 @@ $(document).ready(function() {
           <p>
             <strong>Genre:</strong> ${song.genre} <br>
             <strong>Release Date:</strong> ${song.creation_date}
+            <br>
             ${song.description}
             </p>
             <a href="./song-detail.html?id=${song.id}" class="btn">View Details</a>
