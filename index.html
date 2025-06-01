@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="global">
         <div class="logo">
           <h1>
             <span style="color: #ff1212">C</span
@@ -20,24 +20,22 @@
             ><span style="color: white">vy</span>
           </h1>
         </div>
-        <div class="nav-links">
-          <div class="nav-link active"><a href="./index.html">Home</a></div>
-          <div class="nav-link"><a href="./aboutus.html">About Us</a></div>
-          <div class="nav-link">
-            <a href="./song-collection.html">Song Collection</a>
-          </div>
-          <div class="nav-link"><a href="./register.html">Register</a></div>
-        </div>
-
-        <button id="mobile-menu-btn" class="mobile-menu-btn">
-          <img src="./assets/icons/menu.svg" alt="menu" />
-        </button>
-
-        <div class="mobile-nav-links">
-          <div class="mobile-nav">
-            <div class="nav-link active"><a href="./index.html">Home</a></div>
-            <div class="nav-link"><a href="./aboutus.css">About Us</a></div>
-            <div class="nav-link">
+        <div class="dropdown">
+          <button
+            id="mobile-menu-btn"
+            class="mobile-menu-btn dropdown-toggle-mobile"
+          >
+            <img src="./assets/icons/menu.svg" alt="menu" />
+          </button>
+          <span class="dropdown-toggle-desktop"> Menu </span>
+          <div class="dropdown-menu">
+            <div class="dropdown-item nav-link active">
+              <a href="./index.html">Home</a>
+            </div>
+            <div class="dropdown-item nav-link">
+              <a href="./aboutus.html">About Us</a>
+            </div>
+            <div class="dropdown-item nav-link">
               <a href="./song-collection.html">Song Collection</a>
             </div>
             <div class="nav-link"><a href="./register.html">Register</a></div>
@@ -68,9 +66,11 @@
                   </div>
 
                   <div class="hero-actions">
-                    <button class="btn btn-primary">Start Listening</button>
-                    <a class="btn btn-secondary" href="./song-collection.css"
-                      >Explore Now</a
+                    <a href="#recommended-songs" class="btn btn-primary"
+                      >Start Listening</a
+                    >
+                    <a href="./song-collection.html" class="btn btn-secondary"
+                      >Expolore Now</a
                     >
                   </div>
 
@@ -109,8 +109,10 @@
                   </div>
 
                   <div class="hero-actions">
-                    <button class="btn btn-primary">Start Listening</button>
-                    <a class="btn btn-secondary" href="./song-collection.css"
+                    <a href="#recommended-songs" class="btn btn-primary"
+                      >Start Listening</a
+                    >
+                    <a class="btn btn-secondary" href="./song-collection.html"
                       >Expolore Now</a
                     >
                   </div>
@@ -149,8 +151,10 @@
                   </div>
 
                   <div class="hero-actions">
-                    <button class="btn btn-primary">Start Listening</button>
-                    <a class="btn btn-secondary" href="./song-collection.css"
+                    <a href="#recommended-songs" class="btn btn-primary"
+                      >Start Listening</a
+                    >
+                    <a class="btn btn-secondary" href="./song-collection.html"
                       >Expolore Now</a
                     >
                   </div>
@@ -182,7 +186,7 @@
         </div>
       </section>
 
-      <section class="recommendation-songs">
+      <section class="recommendation-songs" id="recommended-songs">
         <h2>Recommended Songs</h2>
         <div class="songs-container">
           <!-- for song items only -->

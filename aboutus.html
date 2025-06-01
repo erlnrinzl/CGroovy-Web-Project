@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="global">
         <div class="logo">
           <h1>
             <span style="color: #ff1212">C</span
@@ -20,28 +20,22 @@
             ><span style="color: white">vy</span>
           </h1>
         </div>
-        <div class="nav-links">
-          <div class="nav-link"><a href="./index.html">Home</a></div>
-          <div class="nav-link active">
-            <a href="./aboutus.html">About Us</a>
-          </div>
-          <div class="nav-link">
-            <a href="./song-collection.html">Song Collection</a>
-          </div>
-          <div class="nav-link"><a href="./register.html">Register</a></div>
-        </div>
-
-        <button id="mobile-menu-btn" class="mobile-menu-btn">
-          <img src="./assets/icons/menu.svg" alt="menu" />
-        </button>
-
-        <div class="mobile-nav-links">
-          <div class="mobile-nav">
-            <div class="nav-link"><a href="./index.html">Home</a></div>
-            <div class="nav-link active">
+        <div class="dropdown">
+          <button
+            id="mobile-menu-btn"
+            class="mobile-menu-btn dropdown-toggle-mobile"
+          >
+            <img src="./assets/icons/menu.svg" alt="menu" />
+          </button>
+          <span class="dropdown-toggle-desktop"> Menu </span>
+          <div class="dropdown-menu">
+            <div class="dropdown-item nav-link">
+              <a href="./index.html">Home</a>
+            </div>
+            <div class="dropdown-item nav-link active">
               <a href="./aboutus.html">About Us</a>
             </div>
-            <div class="nav-link">
+            <div class="dropdown-item nav-link">
               <a href="./song-collection.html">Song Collection</a>
             </div>
             <div class="nav-link"><a href="./register.html">Register</a></div>
